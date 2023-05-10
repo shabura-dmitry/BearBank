@@ -10,6 +10,7 @@ account_num = 0
 status = 0
 account_type = 0
 
+# going to try creating a dict for each account, converting to str for saving using json, then read file to recreate user database on program run
 accounts = {1: {
                 fname: "", lname: "", pnum: "", address: "", open_date: "", 
                 close_date: "", balance: "", transaction_records: {},
