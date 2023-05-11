@@ -9,11 +9,11 @@ def fdf():
     open_date = 0 #get current date
     close_date = -1 #dont change until closed
     balance = 0 
-    transaction_records = [] # unsure how to implement
+    #transaction_records = []  unsure how to implement
     account_num = 0 # increment for every account made
     status = 1 # for closed, 1 for open
     account_type = 0 # 0 for customer, 1 for official, 2 for admin - probably shouldn't 
-    open_account(fname, lname, pnum)
+    open_account(fname, lname, pnum, address, open_date, close_date, balance, account_num, status, account_type)
 
 def close_account(): #don't delete, just change status
     pass
