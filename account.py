@@ -14,4 +14,5 @@ account_type = 0
 accounts = {1: {
                 fname: "", lname: "", pnum: "", address: "", open_date: "", 
                 close_date: "", balance: "", transaction_records: {},
-                account_num: "", status: "", account_type: ""}}
+                account_num: "", status: "", account_type: ""}
+    }

@@ -1,7 +1,6 @@
 import json
 
 def open_account():
-    
     fname = input("First name:")
     lname = input("Last name:")
     pnum = input("Phone number:")
