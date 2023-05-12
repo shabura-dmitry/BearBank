@@ -14,23 +14,51 @@ def login(username, password):
 login(username, password)
 
 def create_menu(account_type):
+    command = 0
     if account_type == 0:
         print("Please choose an option below:")
         print("""
               a: change login password
-              b: """")
+              b: view account
+              c:view transaction history""")
+        if command == 'a':
+            pass
+        elif command == 'b':
+            pass
+        elif command == 'c':
+            pass
+        else:
+            print ("error")
     elif account_type == 1:
         print("Please choose an option below:")
         print("""
-              a:open/close account
+              a:open//close account
               b:search closed account
               c:search account
               d:deposit""")
+        if command == 'a':
+            pass
+        elif command == 'b':
+            pass
+        elif command == 'c':
+            pass
+        elif command == 'd':
+            pass
+        else:
+            print ("error")
     elif account_type ==2:
         print("Please choose an option below:")
         print ("""
                a:enable/disable official account
                b:retrieve login id
                c:change password""")
+        if command == 'a':
+            pass
+        elif command == 'b':
+            pass
+        elif command == 'c':
+            pass
+        else:
+            print ("error")
     else:
         print("error")
