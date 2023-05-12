@@ -18,7 +18,7 @@ def close_account(): #don't delete, just change status
 
 def deposit_money(): #verify user login for this
     amount = float(input("Amount to deposit: "))
-    data['balance'] = data['balance'] + amount
+    data['balance'] += amount
     
 
 def search_accounts():
