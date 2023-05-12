@@ -1,7 +1,7 @@
 import json
 from datetime import date
 
-def open_account(fname, lname, pnum, address, account_type, balance):
+def open_account(fname, lname, pnum, address, account_type, balance,username, password):
     
 
     open_date = str(date.today())
@@ -10,8 +10,8 @@ def open_account(fname, lname, pnum, address, account_type, balance):
     account_num = 0 # increment for every account made
     status = 1 # 0 for closed, 1 for open
     account = {'fname': fname, 'lname': lname, 'pnum': pnum, 'address': address, 'open_date': open_date, 
-               'close_date': close_date, 'balance': balance,
-               'account_num': account_num, 'status': status, 'account_type': account_type}
+               'close_date': close_date, 'balance': balance,'account_num': account_num,
+                'status': status, 'account_type': account_type, 'username': username, 'password': password}
     
    
     return account
