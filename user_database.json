@@ -1,1 +1,12 @@
-{"fname": 0, "lname": 0, "pnum": 0, "address": 0, "open_date": 0, "close_date": 0, "balance": 1, "transaction_records": 0, "account_num": 0, "status": 0, "account_type": 0}{"fname": 0, "lname": 0, "pnum": 0, "address": 0, "open_date": 0, "close_date": 0, "balance": 0, "transaction_records": 0, "account_num": 0, "status": 0, "account_type": 0}
+{
+      "fname": "v",
+      "lname": "v",
+      "pnum": "v",
+      "address": "v",
+      "open_date": "2023-05-12",
+      "close_date": -1,
+      "balance": 0,
+      "account_num": 0,
+      "status": 1,
+      "account_type": 0
+}
