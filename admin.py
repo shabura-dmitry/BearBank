@@ -8,7 +8,7 @@ def create_official():
     #transaction_records = [] # unsure how to implement
     status = 1 # for closed, 1 for open
     account_type = 0 # 0 for customer, 1 for official, 2 for admin - probably shouldn't 
-    open_account(fname, lname, pnum, address, account_type)
+    open_account(fname, lname, pnum, address, account_type, status)
 
 def get_username(fname, lname):
     pass

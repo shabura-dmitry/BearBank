@@ -6,7 +6,8 @@ def open_customer():
     pnum = input("Phone number:")
     address = input("Address:")
     account_type = 0 # 0 for customer, 1 for official, 2 for admin - probably shouldn't 
-    open_account(fname, lname, pnum, address, account_type)
+    balance = float(input("Enter initial deposit: "))
+    open_account(fname, lname, pnum, address, account_type, balance)
 
 def close_account(): #don't delete, just change status
     pass
