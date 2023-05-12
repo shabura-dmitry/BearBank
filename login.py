@@ -7,6 +7,7 @@ filename = "C:/Users/ds227s/Documents/GitHub/BearBank/user_database.json"
 def login(username, password):
     for account in range(len(data)):
         if data['username'] == username and data['password'] == password:
+            #return the actual account array ex: account = data['account'][account_num]
             create_menu(data['account_type'])
     else:
         print("invalid username or password")

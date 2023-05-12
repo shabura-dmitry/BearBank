@@ -9,6 +9,9 @@ def load_file():
          data = json.load(data)
     return data
 
-def save_file():
-    with open(filename, 'w', encoding="utf8") as data:
-        json.dump(data)
+def save_file(data):
+    with open(filename, 'w', encoding="utf8"):
+        json.dumps(data)
+        
+data = load_file()
+print(data['fname'])

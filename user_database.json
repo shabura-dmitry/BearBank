@@ -1,12 +1,16 @@
 {
-      "fname": "v",
-      "lname": "v",
-      "pnum": "v",
-      "address": "v",
-      "open_date": "2023-05-12",
-      "close_date": -1,
-      "balance": 0,
-      "account_num": 0,
-      "status": 1,
-      "account_type": 0
+	"0": {
+		'fname': fname,
+		'lname': lname,
+		'pnum': pnum,
+		'address': address,
+		'open_date': open_date,
+		'close_date': close_date,
+		'balance': balance,
+		'account_num': account_num,
+		'status': status,
+		'account_type': account_type,
+		'username': username,
+		'password': password
+	}
 }
