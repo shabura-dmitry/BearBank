@@ -1,7 +1,7 @@
 import json
 from datetime import date
 
-def open_account(fname, lname, pnum, address, account_type):
+def open_account(fname, lname, pnum, address, account_type, balance):
     
 
     open_date = str(date.today())
