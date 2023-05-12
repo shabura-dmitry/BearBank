@@ -11,5 +11,3 @@ def login(username, password):
         print("invalid username or password")
 
 login(username, password)
-
-load_file()
