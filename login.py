@@ -3,14 +3,19 @@ data = load_file()
 print("Please enter a username and password")
 username = input("Username:")
 password = input("Password:")
-filename = "C:/Users/ds227s/Documents/GitHub/BearBank/user_database.json"
+
 def login(username, password):
-    for account in range(len(data)):
-        if data['username'] == username and data['password'] == password:
+    for account in data:
+        if data[account]['username'] == username and data[account]['password'] == password:
             #return the actual account array ex: account = data['account'][account_num]
-            create_menu(data['account_type'])
-    else:
-        print("invalid username or password")
+            #create_menu(data['account_type'])
+            print(data[account]['account_num'])
+    #for account in range(len(data)):
+     #   if data[account]['username'] == username and data[account]['password'] == password:
+      #      #return the actual account array ex: account = data['account'][account_num]
+       #     create_menu(data['account_type'])
+    #else:
+     #   print("invalid username or password")
 
 login(username, password)
 
