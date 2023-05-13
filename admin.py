@@ -15,3 +15,13 @@ def get_username(fname, lname):
 
 def change_password():
     pass
+
+def enable_official():
+    pass
+
+def disable_official():
+    pass
+
+def retrieve_login():
+    pass
+

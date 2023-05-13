@@ -1,5 +1,7 @@
 from account import open_account
-from fileloading import load_file
+from fileloading import *
+from datetime import date
+
 data=load_file()
 def open_customer():
     fname = input("First name:")
@@ -12,16 +14,18 @@ def open_customer():
     password = input ("Password: ")
     open_account(fname, lname, pnum, address, account_type, balance, username, password)
 
-def close_account(): #don't delete, just change status
-    status = 0 #variable assigned but not used
+# closes an account by changing the status to 0
+def close_account(account_num): 
+    data[account_num]['status'] = 0
+    data[account_num]['close_date'] = str(date.today())
+    save_file(data)
+
     
 
-def deposit_money(): #verify user login for this
-    amount = float(input("Amount to deposit: "))
-    data['balance'] += amount
+def deposit_money(account_num, amount):
+    data[account_num]['balance'] += amount
+    save_file(data)
     
 
 def search_accounts():
     pass
-
-open_customer()

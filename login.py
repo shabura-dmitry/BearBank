@@ -1,70 +1,71 @@
 from fileloading import load_file
+from official import *
+from admin import *
+from customer import *
 data = load_file()
 print("Please enter a username and password")
-username = input("Username:")
-password = input("Password:")
-
+#username = input("Username:")
+#password = input("Password:")
+username = 'u'
+password = 'p'
 def login(username, password):
-    for account in data:
-        if data[account]['username'] == username and data[account]['password'] == password:
-            #return the actual account array ex: account = data['account'][account_num]
-            #create_menu(data['account_type'])
-            print(data[account]['account_num'])
-    #for account in range(len(data)):
-     #   if data[account]['username'] == username and data[account]['password'] == password:
-      #      #return the actual account array ex: account = data['account'][account_num]
-       #     create_menu(data['account_type'])
-    #else:
-     #   print("invalid username or password")
+    valid = False
+    for i in data:
+        if data[i]['username'] == username and data[i]['password'] == password:
+            valid = True
+            print("Login successful")
+            return data[i]
+        
+    if valid == False:
+        print("Invalid username or password")
+    
+   
 
-login(username, password)
 
-def create_menu(account_type):
-    command = 0
+#this function creates a menu based on the account type
+def create_menu(account):
+    print("create menu")
+    account_type = account['account_type']
+    account_num = account['account_num']
+    # if account type is 0, then it is a customer. if account type is 1, then it is an official. if account type is 2, then it is an admin
+    # customer menu options: change login password, view account, view transaction history
     if account_type == 0:
-        print("Please choose an option below:")
-        print("""
-              a: change login password
-              b: view account
-              c:view transaction history""")
+        command = input("Please choose an option below:\na: change login password\nb: view account\nc:view transaction history")
         if command == 'a':
-            pass
+            change_pass(username, password)
         elif command == 'b':
-            pass
+            view_account(account_num)
         elif command == 'c':
             pass
         else:
             print ("error")
+    # official menu options: open/close account, search closed account, search account, deposit        
     elif account_type == 1:
-        print("Please choose an option below:")
-        print("""
-              a:open//close account
-              b:search closed account
-              c:search account
-              d:deposit""")
+        command = input("Please choose an option below:\na:Open customer account\nb:Close customer account\nc:search account\nd:deposit")
         if command == 'a':
-            pass
+            open_customer()
         elif command == 'b':
-            pass
+            close_customer(account_num)
         elif command == 'c':
             pass
         elif command == 'd':
-            pass
+            deposit_money()
         else:
             print ("error")
+    # admin menu options: enable/disable official account, retrieve login id, change password
     elif account_type ==2:
-        print("Please choose an option below:")
-        print ("""
-               a:enable/disable official account
-               b:retrieve login id
-               c:change password""")
+        command = input("Please choose an option below:\na:enable official account\nb:disable official account\nc:retrieve login id\nd:change password")
         if command == 'a':
-            pass
+            enable_official()
         elif command == 'b':
-            pass
+            disable_official()
         elif command == 'c':
-            pass
+            retrieve_login()
+        elif command == 'd':
+            change_pass()
         else:
             print ("error")
     else:
         print("error")
+
+create_menu(login(username, password))
