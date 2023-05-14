@@ -5,11 +5,14 @@ def open_account(fname, lname, pnum, address, account_type, balance, username, p
     close_date = -1 #dont change until closed
     account_num = len(load_file())+1
     status = 1 # 0 for closed, 1 for open
+    last_login = -1 #dont change until logged in
     account = {
         "fname": fname,
         "lname": lname,
         "pnum": pnum,
         "address": address,
+        "last_login": last_login,
+        "dob": open_date, #change later to input
         "open_date": open_date,
         "close_date": close_date,
         "balance": balance,
