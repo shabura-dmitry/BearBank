@@ -27,6 +27,13 @@ def change_status_official(account_num):
         print("Account closed")
     save_file(data)
 
+# retrieves the login id of a customer account given the full name and date of birth
 def retrieve_login():
-    pass
-
+    fname = input("First name:")
+    lname = input("Last name:")
+    dob = input("Date of birth:")
+    for i in data:
+        if data[i]['fname'] == fname and data[i]['lname'] == lname and data[i]['dob'] == dob:
+            print(data[i]['username'])
+            return
+    print("Account not found")
