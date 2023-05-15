@@ -18,24 +18,34 @@ def open_customer(logged_in_account):
     username = input("Username: ")
     password = input ("Password: ")
     open_account(fname, lname, pnum, address, account_type, official_id, official_fname, official_lname, balance, username, password)
-    print("Account created")
+    print("Account created\n")
 
-# changes the status of a customer account to closed if open and vice versa.
-def change_status_customer(account_num):
-    if data[str(account_num)]['status'] == 0:
-        data[str(account_num)]['status'] = 1
-        print("Account opened")
-    elif data[str(account_num)]['status'] == 1:
-        data[str(account_num)]['status'] = 0
-        print("Account closed")
-    save_file(data)
+# changes the status of a customer account to closed if open and vice versa. #ask for account number
+def change_status_customer():
+    account_num = input("Customer account number:")
+    #check if account type is customer
+    if data[str(account_num)]['account_type'] == 0:
+        if data[str(account_num)]['status'] == 0:
+            data[str(account_num)]['status'] = 1
+            print("Account opened")
+        elif data[str(account_num)]['status'] == 1:
+            data[str(account_num)]['status'] = 0
+            data[str(account_num)]['close_date'] = str(date.today())
+            print("Account closed")
+        save_file(data)
+    else:
+        print("Account not found or not a customer account\n")
 
 
-def deposit_money(account_num, amount): 
+def deposit_money(): 
     account = log_in()
+    account_num = account['account_num']
+    #if account is open
     if account['status'] == 1:
-        data[str(account_num)]['balance'] += amount
-        print("Deposit successful")
+        account['balance'] += float(input("Deposit amount:"))
+        data[str(account_num)] = account
+        print("Deposit successful\nnew balance:", account['balance'])
+        save_file(data)
     
 # search by fname, lname, account number. return only account number, account holder information, opening and close dates, name and id of the bank official involved
 def search_accounts():

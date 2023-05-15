@@ -11,16 +11,16 @@ def create_menu(logged_in_account):
      # if account type is 0, then it is a customer. if account type is 1, then it is an official. if account type is 2, then it is an admin
     account_type = logged_in_account['account_type']
     account_num = logged_in_account['account_num']
-   
+    print("Welcome to BearBank!\n")
     # customer menu options: change login password, view account, view transaction history
     if account_type == 0:
         command = input("Please choose an option below:\na: change login password\nb: view account\nc:view transaction history\n")
         if command == 'a':
-            change_pass()
+            change_pass(logged_in_account)
         elif command == 'b':
-            view_account(account_num)
+            view_account(logged_in_account)
         elif command == 'c':
-            check_transactions(account_num)
+            check_transactions()
         else:
             print ("error")
         create_menu(logged_in_account)
@@ -31,11 +31,11 @@ def create_menu(logged_in_account):
         if command == 'a':
             open_customer(logged_in_account)
         elif command == 'b':
-            change_status_customer(account_num)
+            change_status_customer()
         elif command == 'c':
             search_accounts()
         elif command == 'd':
-            deposit_money(account_num)
+            deposit_money()
         else:
             print ("error")
         create_menu(logged_in_account)
