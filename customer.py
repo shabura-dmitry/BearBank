@@ -4,9 +4,9 @@ from fileloading import *
 #      Myca Defoore - mgd4s@missouristate.edu
 #      Katherine Austin - katherine117@live.missouristate.edu
 # Fall 2023
-data = load_file()
 
 def change_pass(logged_in_account):
+    data = load_file()
     new_pass = input("Please enter a new password:")
     logged_in_account['password'] = new_pass
     print("Password changed\n")

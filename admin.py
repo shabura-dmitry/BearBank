@@ -7,7 +7,6 @@ from datetime import date
 #      Myca Defoore - mgd4s@missouristate.edu
 #      Katherine Austin - katherine117@live.missouristate.edu
 # Fall 2023
-data=load_file()
 
 def open_official(logged_in_account):
     fname = input("First name:")
@@ -26,6 +25,7 @@ def open_official(logged_in_account):
 
 # return the username of a customer account given the first name, last name
 def get_username():
+    data=load_file()
     fname = input("First name:")
     lname = input("Last name:")
     for i in data:
@@ -36,6 +36,7 @@ def get_username():
 
 # changes the status of an official account to closed if open and vice versa.
 def change_status_official():
+    data=load_file()
     account_num = input("Official account number:")
     #check if account type is official
     if data[str(account_num)]['account_type'] == 1:
@@ -49,6 +50,7 @@ def change_status_official():
         save_file(data)
 
 def change_pass_as_admin():
+    data=load_file()
     account_num = input("Account number:")
     new_pass = input("Please enter a new password:")
     data[str(account_num)]['password'] = new_pass
