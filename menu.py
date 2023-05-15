@@ -48,7 +48,7 @@ def create_menu(logged_in_account):
         elif command == 'b':
             change_status_official(account_num)
         elif command == 'c':
-            retrieve_login()
+            get_username()
         elif command == 'd':
             change_pass(account_num)
         else:

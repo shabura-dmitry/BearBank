@@ -37,34 +37,31 @@ def deposit_money(account_num, amount):
         data[str(account_num)]['balance'] += amount
         print("Deposit successful")
     
-
+# search by fname, lname, account number. return only account number, account holder information, opening and close dates, name and id of the bank official involved
 def search_accounts():
-    search = input("Search by:\na: first name\nb: last name\nc: phone number\nd: address\ne: account number\n")
+    search = input("Search by:\na: first name\nb: last name\nc: account number\n")
     if search == 'a':
         fname = input("First name:")
         for i in data:
             if data[i]['fname'] == fname:
-                print(data[i])
+                print("First name:", data[i]['fname'], "\nLast name:", data[i]['lname'], "\nAccount number:", data[i]['account_num'], "\nOpen date:", 
+                data[i]['open_date'], "\nClose date:", data[i]['close_date'], "\nOfficial id:", data[i]['official_id'], "\nOfficial first name:", 
+                data[i]['official_fname'], "\nOfficial last name:", data[i]['official_lname'])
+
     elif search == 'b':
         lname = input("Last name:")
         for i in data:
             if data[i]['lname'] == lname:
-                print(data[i])
+                print("First name:", data[i]['fname'], "\nLast name:", data[i]['lname'], "\nAccount number:", data[i]['account_num'], "\nOpen date:", 
+                data[i]['open_date'], "\nClose date:", data[i]['close_date'], "\nOfficial id:", data[i]['official_id'], "\nOfficial first name:", 
+                data[i]['official_fname'], "\nOfficial last name:", data[i]['official_lname'])
     elif search == 'c':
-        pnum = input("Phone number:")
-        for i in data:
-            if data[i]['pnum'] == pnum:
-                print(data[i])
-    elif search == 'd':
-        address = input("Address:")
-        for i in data:
-            if data[i]['address'] == address:
-                print(data[i])
-    elif search == 'e':
         account_num = input("Account number:")
         for i in data:
             if data[i]['account_num'] == account_num:
-                print(data[i])
+                print("First name:", data[i]['fname'], "\nLast name:", data[i]['lname'], "\nAccount number:", data[i]['account_num'], "\nOpen date:", 
+                data[i]['open_date'], "\nClose date:", data[i]['close_date'], "\nOfficial id:", data[i]['official_id'], "\nOfficial first name:", 
+                data[i]['official_fname'], "\nOfficial last name:", data[i]['official_lname'])
     else:
         print("Invalid input")
         search_accounts()
