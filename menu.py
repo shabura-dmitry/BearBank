@@ -41,7 +41,7 @@ def create_menu(logged_in_account):
 
     # admin menu options: enable/disable official account, retrieve login id, change password
     elif account_type == 2:
-        command = input("Please choose an option below:\na:Open official account\nb:Change official account status\nc:Retrieve login id\nd:Change password\nb")
+        command = input("Please choose an option below:\na:Open official account\nb:Change official account status\nc:Retrieve login id\nd:Change password\n")
         if command == 'a':
             open_official(logged_in_account)
         elif command == 'b':
