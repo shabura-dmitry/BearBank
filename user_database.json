@@ -34,8 +34,8 @@
         "official_lname": "Admin",
         "status": 1,
         "account_type": 1,
-        "username": "pfficial",
-        "password": "qass"
+        "username": "official",
+        "password": "pass"
     },
     "2": {
         "fname": "System",
@@ -53,7 +53,7 @@
         "official_lname": "",
         "status": 1,
         "account_type": 2,
-        "username": "bdmin",
-        "password": "qass"
+        "username": "admin",
+        "password": "pass"
     }
 }
