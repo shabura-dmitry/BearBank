@@ -11,10 +11,10 @@ def open_account(fname, lname, pnum, address, account_type, official_id, officia
         "lname": lname,
         "pnum": pnum,
         "address": address,
-        "last_login": last_login,
         "dob": open_date, #change later to input
         "open_date": open_date,
         "close_date": close_date,
+        "last_login": last_login, #change later to input
         "balance": balance,
         "account_num": account_num,
         "official_id": official_id,
