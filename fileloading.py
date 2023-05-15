@@ -1,6 +1,10 @@
 import json
 import os
-
+#Project Name: Bear Bank
+#Team: Dmitry Shabura - ds227s@missouristate.edu
+#      Myca Defoore - mgd4s@missouristate.edu
+#      Katherine Austin - katherine117@live.missouristate.edu
+# Fall 2023
 #get the path of the file
 dirname = os.path.dirname(__file__)
 filename = os.path.join(dirname, 'user_database.json')

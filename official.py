@@ -2,7 +2,11 @@ from account import open_account
 from fileloading import *
 from datetime import date
 from login import log_in
-
+#Project Name: Bear Bank
+#Team: Dmitry Shabura - ds227s@missouristate.edu
+#      Myca Defoore - mgd4s@missouristate.edu
+#      Katherine Austin - katherine117@live.missouristate.edu
+# Fall 2023
 data=load_file()
 #open a customer account
 def open_customer(logged_in_account):
@@ -27,11 +31,11 @@ def change_status_customer():
     if data[str(account_num)]['account_type'] == 0:
         if data[str(account_num)]['status'] == 0:
             data[str(account_num)]['status'] = 1
-            print("Account opened")
+            print("Account opened\n")
         elif data[str(account_num)]['status'] == 1:
             data[str(account_num)]['status'] = 0
             data[str(account_num)]['close_date'] = str(date.today())
-            print("Account closed")
+            print("Account closed\n")
         save_file(data)
     else:
         print("Account not found or not a customer account\n")

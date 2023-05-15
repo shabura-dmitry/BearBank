@@ -3,7 +3,11 @@ from official import change_status_customer, open_customer, deposit_money, searc
 from admin import *
 from customer import *
 from datetime import date
-
+#Project Name: Bear Bank
+#Team: Dmitry Shabura - ds227s@missouristate.edu
+#      Myca Defoore - mgd4s@missouristate.edu
+#      Katherine Austin - katherine117@live.missouristate.edu
+# Fall 2023
 data = load_file()
 
 #this function creates a menu based on the account type

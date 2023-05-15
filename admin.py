@@ -2,7 +2,11 @@ import json
 from account import open_account
 from fileloading import *
 from datetime import date
-
+#Project Name: Bear Bank
+#Team: Dmitry Shabura - ds227s@missouristate.edu
+#      Myca Defoore - mgd4s@missouristate.edu
+#      Katherine Austin - katherine117@live.missouristate.edu
+# Fall 2023
 data=load_file()
 
 def open_official(logged_in_account):

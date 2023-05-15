@@ -1,4 +1,9 @@
 from fileloading import *
+#Project Name: Bear Bank
+#Team: Dmitry Shabura - ds227s@missouristate.edu
+#      Myca Defoore - mgd4s@missouristate.edu
+#      Katherine Austin - katherine117@live.missouristate.edu
+# Fall 2023
 data = load_file()
 
 def change_pass(logged_in_account):
