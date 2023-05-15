@@ -20,7 +20,7 @@ def log_in():
             valid = False
         
     if valid == False:
-        print("Invalid username or password")
+        print("Invalid username or password\n")
 
 def get_valid():
     return valid
