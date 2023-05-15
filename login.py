@@ -9,6 +9,7 @@ def log_in():
     password = input("Password:")
     for i in data:
         if data[i]['username'] == username and data[i]['password'] == password:
+            global valid
             valid = True
             print("Login successful")
             print("Last login: " + data[i]['last_login'] + "\n")
@@ -20,3 +21,6 @@ def log_in():
         
     if valid == False:
         print("Invalid username or password")
+
+def get_valid():
+    return valid
