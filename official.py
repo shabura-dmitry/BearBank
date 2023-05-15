@@ -7,7 +7,6 @@ from login import log_in
 #      Myca Defoore - mgd4s@missouristate.edu
 #      Katherine Austin - katherine117@live.missouristate.edu
 # Fall 2023
-data=load_file()
 #open a customer account
 def open_customer(logged_in_account):
     fname = input("First name:")
@@ -26,6 +25,7 @@ def open_customer(logged_in_account):
 
 # changes the status of a customer account to closed if open and vice versa. #ask for account number
 def change_status_customer():
+    data=load_file()
     account_num = input("Customer account number:")
     #check if account type is customer
     if data[str(account_num)]['account_type'] == 0:
@@ -42,6 +42,7 @@ def change_status_customer():
 
 
 def deposit_money(): 
+    data=load_file()
     account = log_in()
     account_num = account['account_num']
     #if account is open
@@ -53,6 +54,7 @@ def deposit_money():
     
 # search by fname, lname, account number. return only account number, account holder information, opening and close dates, name and id of the bank official involved
 def search_accounts():
+    data=load_file()
     search = input("Search by:\na: first name\nb: last name\nc: account number\n")
     if search == 'a':
         fname = input("First name:")
