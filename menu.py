@@ -7,10 +7,10 @@ from datetime import date
 data = load_file()
 
 #this function creates a menu based on the account type
-def create_menu(account):
+def create_menu(logged_in_account):
      # if account type is 0, then it is a customer. if account type is 1, then it is an official. if account type is 2, then it is an admin
-    account_type = account['account_type']
-    account_num = account['account_num']
+    account_type = logged_in_account['account_type']
+    account_num = logged_in_account['account_num']
    
     # customer menu options: change login password, view account, view transaction history
     if account_type == 0:
@@ -23,7 +23,9 @@ def create_menu(account):
             check_transactions(account_num)
         else:
             print ("error")
-      
+        create_menu(logged_in_account)
+
+    # official menu options: open customer account, change customer account status, search accounts, deposit
     elif account_type == 1:
         command = input("Please choose an option below:\na:Open customer account\nb:Change customer account status\nc:search accounts\nd:deposit\n")
         if command == 'a':
@@ -36,8 +38,10 @@ def create_menu(account):
             deposit_money(account_num)
         else:
             print ("error")
+        create_menu(logged_in_account)
+
     # admin menu options: enable/disable official account, retrieve login id, change password
-    elif account_type ==2:
+    elif account_type == 2:
         command = input("Please choose an option below:\na:Open official account\nb:Change official account status\nc:Retrieve login id\nd:Change password\nb")
         if command == 'a':
             open_official()
@@ -49,5 +53,7 @@ def create_menu(account):
             change_pass(account_num)
         else:
             print ("error")
+        create_menu(logged_in_account)
+
     else:
         print("error")
