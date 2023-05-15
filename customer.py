@@ -9,7 +9,7 @@ def change_pass(username, password, account_num):
         save_file(data)
 
 def check_transactions(): #create some transactions first
-    pass
+    print("unimplemented")
 
 def view_account(account_num):
     print(data[account_num])

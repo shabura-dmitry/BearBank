@@ -2,17 +2,22 @@ from account import open_account
 from fileloading import *
 from datetime import date
 from login import log_in
+
 data=load_file()
-def open_customer():
+#open a customer account
+def open_customer(logged_in_account):
     fname = input("First name:")
     lname = input("Last name:")
     pnum = input("Phone number:")
     address = input("Address:")
     account_type = 0 # 0 for customer, 1 for official, 2 for admin
-    balance = float(input("Enter initial deposit: "))
+    official_id = logged_in_account['account_num']
+    official_fname = logged_in_account['fname']
+    official_lname = logged_in_account['lname']
+    balance = 0
     username = input("Username: ")
     password = input ("Password: ")
-    open_account(fname, lname, pnum, address, account_type, balance, username, password)
+    open_account(fname, lname, pnum, address, account_type, official_id, official_fname, official_lname, balance, username, password)
     print("Account created")
 
 # changes the status of a customer account to closed if open and vice versa.

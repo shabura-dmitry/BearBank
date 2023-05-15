@@ -29,7 +29,7 @@ def create_menu(logged_in_account):
     elif account_type == 1:
         command = input("Please choose an option below:\na:Open customer account\nb:Change customer account status\nc:search accounts\nd:deposit\n")
         if command == 'a':
-            open_customer()
+            open_customer(logged_in_account)
         elif command == 'b':
             change_status_customer(account_num)
         elif command == 'c':

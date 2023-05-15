@@ -14,8 +14,16 @@ def open_official():
     account_type = 1 # 0 for customer, 1 for official, 2 for admin - probably shouldn't 
     open_account(fname, lname, pnum, address, account_type, status)
 
-def get_username(fname, lname, pnum):
-    pass
+# return the username of a customer account given the first name, last name, and date of borth
+def get_username():
+    fname = input("First name:")
+    lname = input("Last name:")
+    dob = input("Date of birth: (YYYY-MM-DD)")
+    for i in data:
+        if data[i]['fname'] == fname and data[i]['lname'] == lname and data[i]['dob'] == dob:
+            print(data[i]['username'])
+            return
+    print("Account not found")
 
 # changes the status of an official account to closed if open and vice versa.
 def change_status_official(account_num):
