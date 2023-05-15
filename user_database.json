@@ -6,7 +6,7 @@
         "address": "home",
         "dob": "2023-05-13",
         "open_date": "2023-05-13",
-        "close_date": -1,
+        "close_date": "2023-05-15",
         "last_login": "2023-05-15",
         "balance": 6.0,
         "account_num": 0,
@@ -26,16 +26,16 @@
         "dob": "2023-05-13",
         "open_date": "2023-05-13",
         "close_date": "2023-05-15",
-        "last_login": "2023-05-13",
-        "balance": 5.0,
+        "last_login": "2023-05-15",
+        "balance": 205.0,
         "account_num": 1,
         "official_id": "2",
         "official_fname": "System",
         "official_lname": "Admin",
         "status": 1,
         "account_type": 1,
-        "username": "official",
-        "password": "pass"
+        "username": "pfficial",
+        "password": "qass"
     },
     "2": {
         "fname": "System",
@@ -53,7 +53,7 @@
         "official_lname": "",
         "status": 1,
         "account_type": 2,
-        "username": "admin",
-        "password": "pass"
+        "username": "bdmin",
+        "password": "qass"
     }
 }

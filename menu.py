@@ -10,7 +10,6 @@ data = load_file()
 def create_menu(logged_in_account):
      # if account type is 0, then it is a customer. if account type is 1, then it is an official. if account type is 2, then it is an admin
     account_type = logged_in_account['account_type']
-    account_num = logged_in_account['account_num']
     print("---Welcome to BearBank!---\n")
     # customer menu options: change login password, view account, view transaction history
     if account_type == 0:
